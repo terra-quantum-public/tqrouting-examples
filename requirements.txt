@@ -1,0 +1,10 @@
+# TQrouting is published on Terra Quantum's package index; this line adds it to
+# pip's sources. Dependencies still come from PyPI.
+--extra-index-url https://europe-python.pkg.dev/bright-primacy-486519-b9/tq-public/simple
+
+# The SDK, pinned to the release these notebooks were written against.
+# The [osrm-local] extra adds the OSRM matrix providers used in real_world_osrm.ipynb.
+tqrouting[osrm-local]==0.4.0
+
+jupyter>=1.0
+matplotlib>=3.8
