@@ -1,0 +1,16 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Files written by the notebooks
+output/
+
+# Python
+__pycache__/
+.venv/
+venv/
+.env
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
