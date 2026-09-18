@@ -56,17 +56,16 @@ distributions have them; minimal container images may need
 **License key:** every solve verifies the key online, so the machine needs
 internet access.
 
-> **TODO:** how to obtain a TQrouting license key (contact / form / link).
+A valid license key is required to use the library. To request access, please
+follow the application process here: [the TQrouting access request form].
 
 **Docker** is only needed for the local-OSRM section of `tutorials/real_world_osrm.ipynb`.
 
 ## Documentation
 
 The full SDK documentation (installation, problem definition, matrices,
-solver configuration, results, and one page per feature) is published
-separately.
-
-> **TODO:** link to the hosted SDK documentation.
+solver configuration, results, and one page per feature) is published at
+[tqrouting-docs.terraquantum.io].
 
 ## Data
 
