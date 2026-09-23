@@ -57,7 +57,7 @@ distributions have them; minimal container images may need
 internet access.
 
 A valid license key is required to use the library. To request access, please
-follow the application process here: [the TQrouting access request form].
+sign up on the [TQrouting page](https://terraquantum.swiss/vehicle-routing-optimization-engine/).
 
 **Docker** is only needed for the local-OSRM section of `tutorials/real_world_osrm.ipynb`.
 
@@ -65,7 +65,7 @@ follow the application process here: [the TQrouting access request form].
 
 The full SDK documentation (installation, problem definition, matrices,
 solver configuration, results, and one page per feature) is published at
-[tqrouting-docs.terraquantum.io].
+[tqrouting-docs.terraquantum.io](https://tqrouting-docs.terraquantum.io/).
 
 ## Data
 
