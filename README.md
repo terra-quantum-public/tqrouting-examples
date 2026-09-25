@@ -1,14 +1,10 @@
 # TQrouting Examples
 
-Jupyter notebooks showing how to solve vehicle routing problems with **TQrouting**,
-the Python SDK for Terra Quantum's vehicle routing solver.
+This repository contains runnable Jupyter notebook examples for **TQrouting**, Terra Quantum's Python SDK for vehicle routing optimization. Use it to explore modeled routing scenarios and reproduce the examples locally.
 
-TQrouting computes optimized routes for a fleet of vehicles serving a set of
-customers: capacities (one- or two-dimensional), time windows, driver shifts,
-route duration and distance limits, pickup and delivery, multi-trip reloads,
-heterogeneous fleets, multiple depots, prize-collecting, and any combination
-of these. Distance matrices come from your own data, from OSRM, or from Google
-Maps.
+This repository contains only the notebooks and their example data. The SDK itself is not included: it is installed separately from Terra Quantum's package index and needs a license key (see [Getting started](#getting-started)). For complete modeling guidance, see the [TQrouting documentation](https://tqrouting-docs.terraquantum.io/).
+
+TQrouting computes optimized routes for a fleet of vehicles serving a set of customers: capacities (one- or two-dimensional), time windows, driver shifts, route duration and distance limits, pickup and delivery, multi-trip reloads, heterogeneous fleets, multiple depots, prize-collecting, and any combination of these. Distance matrices come from your own data, from OSRM, or from Google Maps.
 
 ## Tutorials
 
@@ -23,8 +19,10 @@ Short notebooks that walk through the SDK feature by feature, in this order:
 | [real_world_osrm.ipynb](tutorials/real_world_osrm.ipynb) | GPS coordinates and road-network matrices via OSRM (public demo server, or a local Docker server for a 500-customer instance), map plots. |
 
 Each notebook is self-contained: run the setup cell at the top, then jump to
-any section. Outputs are committed, so you can read the results on GitHub
-without running anything.
+any section.
+
+**Browsing vs. running:** you can read the rendered notebooks and their outputs directly on GitHub, without installing TQrouting or obtaining a license key. Running notebooks locally requires the SDK, a valid license key, and internet connectivity for license verification (see [Getting started](#getting-started)).
+`real_world_osrm.ipynb` is committed without outputs; run it locally to see its maps.
 
 ## Getting started
 
@@ -84,12 +82,22 @@ The executed copy lands in `output/`. The Docker section of
 `tutorials/real_world_osrm.ipynb` needs a running Docker daemon and downloads a map
 extract on first use.
 
-## Issues
+## Support
 
-Found a bug in the SDK or a broken example? Open an issue here with the
-`tqrouting` version (`pip show tqrouting`), your OS and Python version, a
-minimal instance (`instance.to_json(...)`) and the exact error text. Never
-paste your license key.
+Found a bug in TQrouting or in an example notebook, need help with installation
+or licensing, or want to request a feature? Contact us at
+[support@terraquantum.swiss](mailto:support@terraquantum.swiss).
+
+To help us investigate, please include:
+
+- Your TQrouting version (`python -m pip show tqrouting`, run in the same environment as your Jupyter kernel);
+- Your operating system and Python version;
+- The notebook or script you ran;
+- A minimal instance where applicable, built from synthetic or anonymized data (`instance.to_json(...)`);
+- The complete error message and traceback;
+- The steps needed to reproduce the problem.
+
+Never send your license key, passwords or tokens, real customer data, or confidential information. If a problem only reproduces on real data, tell us and we will agree on a secure way to share it. For licensing questions, give the email address your license was issued to.
 
 ## License
 
