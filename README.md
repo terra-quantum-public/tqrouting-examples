@@ -4,7 +4,7 @@ This repository contains runnable Jupyter notebook examples for **TQrouting**, T
 
 Only the notebooks and their example data live here. The SDK itself is installed separately from Terra Quantum's package index and needs a license key (see [Getting started](#getting-started)). For complete modeling guidance, see the [TQrouting documentation](https://routing-docs.terraquantum.io/).
 
-TQrouting computes optimized routes for a fleet of vehicles serving a set of customers: capacities (one- or two-dimensional), time windows, driver shifts, route duration and distance limits, mixed pickups and deliveries (to and from the depot), multi-trip reloads, heterogeneous fleets, multiple depots, prize-collecting, and any combination of these. Distance matrices come from your own data, from OSRM, or from Google Maps.
+TQrouting computes optimized routes for a fleet of vehicles serving a set of customers: capacities (one- or two-dimensional), time windows, driver shifts, route duration and distance limits, mixed pickups and deliveries (to and from the depot), multi-trip reloads, heterogeneous fleets with vehicle types allowed per customer, multiple depots, prize-collecting with optional and required customers, and any combination of these. Distance matrices come from your own data, from OSRM, or from Google Maps.
 
 ## Tutorials
 
@@ -13,8 +13,8 @@ Short notebooks that walk through the SDK feature by feature, in this order:
 | Notebook | What's inside |
 |---|---|
 | [quickstart.ipynb](tutorials/quickstart.ipynb) | **Start here.** Build a small capacitated VRP, solve it, plot the routes. |
-| [constraints.ipynb](tutorials/constraints.ipynb) | Everything that decides which solutions are *allowed*: time windows, capacities (1-D and 2-D), route limits, shifts, pickup & delivery, multi-trip reloads, heterogeneous fleets, multiple depots. |
-| [objectives.ipynb](tutorials/objectives.ipynb) | What the solver *minimizes*: duration/distance trade-off, prize-collecting, fixed vehicle costs, waiting-time pricing, soft constraints. |
+| [constraints.ipynb](tutorials/constraints.ipynb) | Everything that decides which solutions are *allowed*: time windows, capacities (1-D and 2-D), route limits, shifts, pickup & delivery, multi-trip reloads, heterogeneous fleets and the vehicle types allowed per customer, multiple depots. |
+| [objectives.ipynb](tutorials/objectives.ipynb) | What the solver *minimizes*: duration/distance trade-off, prize-collecting with optional and required customers, fixed vehicle costs, waiting-time pricing, soft constraints. |
 | [workflow.ipynb](tutorials/workflow.ipynb) | The practical plumbing: JSON round-trips, time formats, schedules and departure times, infeasibility and warnings. |
 | [real_world_osrm.ipynb](tutorials/real_world_osrm.ipynb) | GPS coordinates and road-network matrices via OSRM (public demo server, or a local Docker server for a 500-customer instance), map plots. |
 
@@ -44,7 +44,7 @@ TQrouting is published on Terra Quantum's package index, and `requirements.txt`
 already points pip there. To install the SDK by hand:
 
 ```bash
-pip install "tqrouting[osrm-local]==1.0.0" --extra-index-url https://europe-python.pkg.dev/bright-primacy-486519-b9/tq-public/simple
+pip install "tqrouting[osrm-local]==1.1.0" --extra-index-url https://europe-python.pkg.dev/bright-primacy-486519-b9/tq-public/simple
 ```
 
 **Linux:** the bundled solver needs `libcurl4` and `libgomp1`. Desktop
