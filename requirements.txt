@@ -4,7 +4,7 @@
 
 # The SDK, pinned to the release these notebooks were written against.
 # The [osrm-local] extra adds the OSRM matrix providers used in real_world_osrm.ipynb.
-tqrouting[osrm-local]==1.0.0
+tqrouting[osrm-local]==1.1.0
 
 jupyter>=1.0
 matplotlib>=3.8
